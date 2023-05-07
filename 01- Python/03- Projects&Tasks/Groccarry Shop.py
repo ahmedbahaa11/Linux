@@ -7,7 +7,7 @@
 Shop_Tuple = ("Name","Amount","Price of 1Kg")
 Shop_List = [("Apple     ",100,30),("Banana    ",130,20),("Strawberry",111,15),("tomatoes  ",150,10),("potatoes  ",200,18)]
 Buyer_Cart = []
-
+import os
 print("***************************************")
 print("***************************************")
 print("**    Welcome to My Groccarry Shop   **")
@@ -25,6 +25,7 @@ while True :
     print("Enter the mode you need: ");
     Mode = int(input("Select Mode: "))
     print("===========================")
+    os.system('cls' if os.name == 'nt' else 'clear')
     if Mode == 1 :
         print( "Please Enter Admin Password: " )
         Range = range(0,3,1)
@@ -55,11 +56,13 @@ while True :
                         ItemPrice  = int(input("Entre Price of 1 Kg from Item : "))
                         Shop_Tuple = (ItemName,ItemAmount,ItemPrice)
                         Shop_List.append(Shop_Tuple)
+                        os.system('cls' if os.name == 'nt' else 'clear')
                         print( "======================================================================" )
                         print( "=======================  Insertion Successfully  =====================" )
                         print( "======================================================================" )
                     elif Admin_Feature == 2 :
                         # View All Items 
+                        os.system('cls' if os.name == 'nt' else 'clear')
                         List_Range = range(0,len(Shop_List),1)
                         print( "======================================================================" )
                         for List_iter in List_Range :
@@ -69,6 +72,7 @@ while True :
 
                     elif Admin_Feature == 3 :
                         # Edit in Item Details
+                        os.system('cls' if os.name == 'nt' else 'clear')
                         List_Range = range(0,len(Shop_List),1)
                         for List_iter in List_Range :
                             Shop_Tuple = Shop_List[List_iter]
@@ -80,13 +84,16 @@ while True :
                         ItemPrice  = int(input(" Entre New Price of 1 Kg from Item :"))
                         Shop_Tuple = (ItemName,ItemAmount,ItemPrice)
                         Shop_List[Select_Item] = Shop_Tuple
+                        os.system('cls' if os.name == 'nt' else 'clear')
                         print( "======================================================================" )
                         print( "=======================  Modified Successfully  ======================" )
                         print( "======================================================================" )
                     else :
+                        os.system('cls' if os.name == 'nt' else 'clear')
                         break
             else :	
                 if i == 2 :
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     print("********************************************************")
                     print("***  Incorrect Password for 3 times, No more tries   ***")
                     print("********************************************************")
@@ -110,6 +117,7 @@ while True :
             print( "==========================" )
             if Buyer_Feature == 1 :
                 while True :
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     List_Range = range(0,len(Shop_List),1)
                     print( "======================================================================" )
                     for List_iter in List_Range :
@@ -122,6 +130,7 @@ while True :
                     Shop_Tuple = (Shop_List[Temp][0], Shop_List[Temp][1]-AddAmount_Item ,Shop_List[Temp][2])
                     Shop_List[Temp] = Shop_Tuple
                     Buyer_Cart.append(Buyer_Tuple)
+                    os.system('cls' if os.name == 'nt' else 'clear')
                     print( "==========================" )
                     print( "(1) Continue Shopping" )
                     print( "(0) Exit Shopping" )
@@ -133,6 +142,7 @@ while True :
 
             elif Buyer_Feature == 2 :
                 # View Receipt & Checkout
+                os.system('cls' if os.name == 'nt' else 'clear')
                 Total_Recript = 0
                 Buyer_Cart_Range = range(0,len(Buyer_Cart),1)
                 print( "======================================================================" )
@@ -147,8 +157,10 @@ while True :
                 print( "======================================================================" )
                 Buyer_Feature = 0
             else :
+                os.system('cls' if os.name == 'nt' else 'clear')
                 break
     else :
+        os.system('cls' if os.name == 'nt' else 'clear')
         print( "==========================" )
         print( "==========================" )
         print( "=====    Good Bey    =====" )
