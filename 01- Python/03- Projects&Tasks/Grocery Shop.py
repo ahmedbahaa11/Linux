@@ -5,12 +5,12 @@
 ######################################
 
 Shop_Tuple = ("Name","Amount","Price of 1Kg")
-Shop_List = [("Apple     ",100,30),("Banana    ",130,20),("Strawberry",111,15),("tomatoes  ",150,10),("potatoes  ",200,18)]
+Shop_List = [("Apple     ",400,30),("Banana    ",160,20),("Strawberry",260,15),("tomatoes  ",150,10),("potatoes  ",200,18)]
 Buyer_Cart = []
 import os
 print("***************************************")
 print("***************************************")
-print("**    Welcome to My Groccarry Shop   **")
+print("**    Welcome to My Groccery Shop    **")
 print("**     Auther : Ahmed Bahaa Nasr     **")
 print("**      Embedded Linux Software      **")
 print("***************************************")
